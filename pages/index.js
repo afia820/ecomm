@@ -1,50 +1,71 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Skatr Shop</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          <a>Skatr Shoppin</a>
         </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <p className={styles.description}>The place to get some skates!</p>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
+            <img src="/images/jungle.png" alt="Moxi Jungle Skates" />
+            <h3>Moxi Jungle Roller Skate</h3>
+            <p>
+              The Moxi Jungle Skates are brown leopard print vinyl skates, vegan
+              friendly, and ready to roll.
+            </p>
           </a>
 
           <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+            <img
+              src="/images/rainbow-rider.png"
+              alt="Moxi Rainbow Rider Skates"
+            />
+            <h3>Rainbow Rider</h3>
+            <p>
+              The Moxi Rainbow Rider is designed for the beginning recreational
+              skater looking for an outdoor roller skate packed with
+              high-quality comfort at an affordable price.
+            </p>
           </a>
 
           <a
             href="https://github.com/vercel/next.js/tree/master/examples"
             className={styles.card}
           >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+            <img
+              src="/images/watermelon.png"
+              alt="Beach Bunny Watermelon Skates"
+            />
+            <h3>Beach Bunny Roller Skates - Watermelon</h3>
+            <p>
+              The Beach Bunny features a traditional high top boot with
+              thoughtful touches including drum-dyed vinyl uppers for more
+              authentic color saturation and additional ankle padding that
+              provides comfort and security whether you’re cruising down the
+              boulevard or ripping up your favorite skate park.
+            </p>
           </a>
 
           <a
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             className={styles.card}
           >
-            <h3>Deploy &rarr;</h3>
+            <img src="/images/black-suede.png" alt="Lolly Black Suede Skates" />
+            <h3>Lolly Outdoor Complete - Classic Black Suede</h3>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              Moxi Lolly Black Skates are a mid-range lifestyle skate, designed
+              for recreation and street skating.
             </p>
           </a>
         </div>
@@ -61,5 +82,5 @@ export default function Home() {
         </a>
       </footer>
     </div>
-  )
+  );
 }
