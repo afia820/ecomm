@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import products from '../products.json';
+import { initiateCheckout } from '../lib/payments';
 
 export default function Home() {
-  // console.log('<<<products', products);
   return (
     <div className={styles.container}>
       <Head>
@@ -25,8 +25,26 @@ export default function Home() {
                 <a href="#">
                   <img src={image} alt="Moxi Jungle Skates" />
                   <h3>{title}</h3>
-                  <p>{price}</p>
+                  <p>${price}</p>
                   <p>{description}</p>
+                  <p>
+                    <button
+                      type="submit"
+                      className={styles.button}
+                      onClick={() => {
+                        initiateCheckout({
+                          lineItems: [
+                            {
+                              price: id,
+                              quantity: 1,
+                            },
+                          ],
+                        });
+                      }}
+                    >
+                      Buy Now
+                    </button>
+                  </p>
                 </a>
               </li>
             );
